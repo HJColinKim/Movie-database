@@ -1,0 +1,102 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap:5px;
+    margin-bottom: 40px;
+}
+
+img{
+    min-width: 100%;
+    display: block;
+    box-shadow: 0 0 3px 2px rgb(48, 45, 45);
+    transition: 0.4s ease-in-out;
+}
+
+img:hover{
+    transform: scale(1.05);
+}
+
+input{
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.1rem;
+
+}
+
+input:focus-within{
+    box-shadow: 0 0 3px 3px rgb(93, 59, 217);
+}
+
+button{
+    font-size: 1rem;
+    padding: 0.25em 0.75em;
+    border:none;
+    background-color: rgb(208, 205, 13);
+    color: aliceblue;
+    font-weight: bold;
+    box-shadow: 3px 3px 7px 0px rgb(100, 93, 93);
+    border-radius: 3px;
+}
+
+button:active{
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 7px 0px rgb(100, 93, 93);
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+.image-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 0.4fr));
+    gap: 20px;
+    margin: 10px auto;
+    place-content: center;
+
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  .toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
